@@ -1,0 +1,32 @@
+{% extends 'post/layouts/main.html' %}
+
+{% block title %}
+Blogs
+{% endblock title %}
+
+{% block content %}
+<div class="row bg-f2f2f2">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="text-center">
+                    <h2> Welcome to Sharma Coder Blogs </h2>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        {{form.title}}
+                    </div>
+                    <div class="card-body">
+                        {{form.description}}
+                    </div>
+                </div>
+                <div class="float-right m-4">
+                    <a href="{% url '/' %}" class="btn bg-red">Go To Main Page</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}

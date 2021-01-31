@@ -1,0 +1,38 @@
+{% extends 'post/layouts/main.html' %}
+{% load static %}
+
+{% block title %}
+Register
+{% endblock title %}
+
+{% block content %}
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card mt-3">
+                <div class="text-center">
+                    {% for msg in messages %}
+                        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                            <strong>Hey !</strong> {{msg}}
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                    {% endfor %}
+                </div>
+                <div class="card-header text-center">
+                    <h2> Registration Form in Django</h2>
+                </div>
+                <form action="" method="POST">
+                    {% csrf_token %}
+                    <div class="card-body">
+                        {{form.as_p}}
+                    <button class="btn btn-primary btn-success btn-block" value=""> Register</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}

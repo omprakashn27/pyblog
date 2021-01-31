@@ -1,0 +1,27 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        {% block title %}
+
+        {% endblock title %}
+    </title>
+
+    <link rel="stylesheet" href="{% static '/css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static '/css/custom.css' %}">
+</head>
+<body>
+    {% include 'post/includes/navbar.html' %}
+
+    {% block content %}
+
+    {% endblock content %}
+
+    <script src="{% static '/js/jquery.js' %}"></script>
+    <script src="{% static '/js/popper.js' %}"></script>
+    <script src="{% static '/js/bootstap.js' %}"></script>
+
+</body>
+</html>
